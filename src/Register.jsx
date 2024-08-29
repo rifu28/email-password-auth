@@ -9,9 +9,10 @@ const Register = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const accept = e.target.terms.accepted;
     setSuccess("");
     setRegisterError("");
-    console.log(email, password);
+    console.log(email, password, accept);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
@@ -45,7 +46,14 @@ const Register = () => {
           />
           <br />
           <br />
-          <div className="flex justify-center">
+          <div>
+            <input type="checkbox" name="terms" id="terms" />
+            <label className="ml-2" htmlFor="terms">
+              Accept out <a href="">terms and conditions</a>
+            </label>
+          </div>
+          <br />
+          <div>
             <input className="btn" type="submit" value="Register" />
           </div>
         </form>
