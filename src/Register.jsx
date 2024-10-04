@@ -7,9 +7,9 @@ const Register = () => {
   const [success, setSuccess] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
-    // const email = e.target.email.value;
-    // const password = e.target.password.value;
-    // const accept = e.target.terms.accepted;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const accept = e.target.terms.accepted;
     setSuccess("");
     setRegisterError("");
     console.log(email, password, accept);
