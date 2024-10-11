@@ -2,17 +2,17 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "./firebase.init";
 
 const Login = () => {
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        console.log(result.user);
-      })
-      .then((error) => {
-        console.log(error.message);
-      });
+  // const handleLogin = (e) => {
+  //   e.preventDefault();
+  //   const email = e.target.email.value;
+  //   const password = e.target.password.value;
+  //   signInWithEmailAndPassword(auth, email, password)
+  //     .then((result) => {
+  //       console.log(result.user);
+  //     })
+  //     .then((error) => {
+  //       console.log(error.message);
+  //     });
   };
   return (
     <div>
